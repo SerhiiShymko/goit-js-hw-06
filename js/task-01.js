@@ -1,23 +1,21 @@
-// const totalCategory = document.querySelectorAll("li.item");
-// console.log("Number of categories:", totalCategory.length);
+const categoryEl = document.querySelector("#categories");
+console.log(categoryEl);
 
-// const list = document.li;
-// console.log(list);
-// const list1 = li.firstElementChild;
-// console.log(list);
-// const firstListItem = list.firstElementChild;
-// console.log(firstListItem);
+const totalCategory = categoryEl.querySelectorAll(".item");
+console.log("Number of categories:", totalCategory.length);
 
-console.log(document);
+const totalH = document.querySelectorAll("h2");
+console.log(totalH);
 
-const ul = document.querySelector("#categories");
-console.log(ul);
+const categoryEla = document.querySelector("#categories ul");
+const categoryElam = categoryEla.querySelectorAll("li");
+console.log(categoryElam.length);
 
-const list = ul.firstElementChild;
-console.log(list);
+// for (const item of totalH) {
+//   console.log(item);
+// }
 
-const firstListItem = list.firstElementChild;
-console.log(firstListItem);
-
-const listItems = list.children;
-console.log(listItems);
+totalH.forEach((item, value) => {
+  console.log("Category:", item.textContent);
+  console.log("Elements:", value);
+});
