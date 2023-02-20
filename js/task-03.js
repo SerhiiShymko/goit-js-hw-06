@@ -24,9 +24,9 @@ const elemets = images.map((image) => {
   const itemsEl = document.createElement("li");
   itemsEl.classList.add("item");
   const imgsEl = document.createElement("img");
-  // imgsEl.src = image.url;
-  // imgsEl.alt = image.alt;
-  list.insertAdjacentHTML("afterend", "img");
+  imgsEl.src = image.url;
+  imgsEl.alt = image.alt;
+  // list.insertAdjacentHTML("afterend", "img");
   imgsEl.width = 320;
   // list.append(itemsEl);
   itemsEl.append(imgsEl);
