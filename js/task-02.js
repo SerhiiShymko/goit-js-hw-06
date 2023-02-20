@@ -13,31 +13,15 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
+
 const list = document.querySelector("#ingredients");
 
-const itemFirst = document.createElement("li");
-itemFirst.classList.add("item");
-itemFirst.textContent = "Potatoes";
+ingredients.forEach((value) => {
+  const listItem = document.createElement("li");
+  listItem.classList.add("item");
+  listItem.textContent = value;
+  list.append(listItem);
+});
 
-const itemSecond = document.createElement("li");
-itemSecond.classList.add("item");
-itemSecond.textContent = "Mushrooms";
-
-const itemThird = document.createElement("li");
-itemThird.classList.add("item");
-itemThird.textContent = "Garlic";
-
-const itemFourth = document.createElement("li");
-itemFourth.classList.add("item");
-itemFourth.textContent = "Tomatos";
-
-const itemFifth = document.createElement("li");
-itemFifth.classList.add("item");
-itemFifth.textContent = "Herbs";
-
-const itemSixth = document.createElement("li");
-itemSixth.classList.add("item");
-itemSixth.textContent = "Condiments";
-
-list.append(itemFirst, itemSecond, itemThird, itemFourth, itemFifth, itemSixth);
-console.log(list);
+const body = document.querySelector("#ingredients");
+body.append(list
