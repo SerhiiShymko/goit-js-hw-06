@@ -20,20 +20,11 @@ const images = [
   },
 ];
 
-const elemets = images.map((image) => {
-  const itemsEl = document.createElement("li");
-  itemsEl.classList.add("item");
-  const imgsEl = document.createElement("img");
-  imgsEl.src = image.url;
-  imgsEl.alt = image.alt;
-  // list.insertAdjacentHTML("afterend", "img");
-  imgsEl.width = 320;
-  // list.append(itemsEl);
-  itemsEl.append(imgsEl);
+const markup = images
+  .map(
+    (animal) =>
+      `<li class ='item'> <img src = '${animal.url}' alt = '${animal.alt}' width = 320'> </li>`
+  )
+  .join("");
 
-  return itemsEl;
-});
-console.log(elemets);
-
-list.append(...elemets);
-// itemsEl.append(...imgsEl);
+list.insertAdjacentHTML("beforeend", markup);

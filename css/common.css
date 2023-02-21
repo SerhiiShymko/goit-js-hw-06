@@ -27,5 +27,5 @@ button {
   display: flex;
 }
 .item {
-  margin-top: 10px;
+  gap: 10px;
 }
