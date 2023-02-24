@@ -4,18 +4,26 @@
 // <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 
 const textInput = document.querySelector("#name-input");
-const output = document.querySelector("#name-output");
+const textOutput = document.querySelector("#name-output");
+
+// textInput.addEventListener("input", onInputText);
+
+// function onInputText(event) {
+//   output.textContent = event.currentTarget.value.trim();
+// }
+
+// textInput.addEventListener("input", (event) => {
+//   if (event.currentTarget.value.trim() === "") {
+//     textOutput.textContent = "Anonymous";
+//     return;
+//   } else {
+//     textOutput.textContent = event.currentTarget.value.trim();
+//   }
+// });
 
 textInput.addEventListener("input", (event) => {
-  event.preventDefault();
-  output.textContent = event.currentTarget.value;
-  console.log(event.currentTarget.value);
+  textOutput.textContent =
+    event.currentTarget.value.trim() === ""
+      ? "Anonimous"
+      : event.currentTarget.value.trim();
 });
-
-// if (!textInput.trim) {
-//   (function () {
-//     textInput.trim = function () {
-//       return this.replace("");
-//     };
-//   })();
-// }
