@@ -6,8 +6,8 @@
 
 const textInput = document.querySelector("#validation-input");
 
-// function onInputFocus(event) {
-const onInputBlur = (event) => {
+function onInputBlur(event) {
+  // const onInputBlur = (event) => {
   if (event.currentTarget.value.length === Number(textInput.dataset.length)) {
     textInput.classList.add("valid");
     textInput.classList.remove("invalid");
@@ -16,7 +16,7 @@ const onInputBlur = (event) => {
     textInput.classList.remove("valid");
   }
   // console.log("получил фокус");
-};
+}
 
 // function onInputBlur() {
 //   console.log("потерял фокус");
