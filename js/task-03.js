@@ -23,7 +23,7 @@ const images = [
 const markup = images
   .map(
     (animal) =>
-      `<li class ='item'> <img src = '${animal.url}' alt = '${animal.alt}' width = 320'> </li>`
+      `<li class ='item'> <img src = '${animal.url}' alt = '${animal.alt}' width = 320 height = 180'> </li>`
   )
   .join("");
 

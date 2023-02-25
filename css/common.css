@@ -23,9 +23,16 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
-.galery {
-  display: flex;
+img {
+  display: block;
+  max-width: 100%;
+  /* height: auto; */
 }
-.item {
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
   gap: 10px;
 }
+/* .item {
+  outline: 1px solid red;
+} */

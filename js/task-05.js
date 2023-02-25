@@ -11,7 +11,7 @@ const textOutput = document.querySelector("#name-output");
 // function onInputText(event) {
 //   output.textContent = event.currentTarget.value.trim();
 // }
-
+// ////////////////////////////
 // textInput.addEventListener("input", (event) => {
 //   if (event.currentTarget.value.trim() === "") {
 //     textOutput.textContent = "Anonymous";
@@ -20,7 +20,7 @@ const textOutput = document.querySelector("#name-output");
 //     textOutput.textContent = event.currentTarget.value.trim();
 //   }
 // });
-
+// ////////////////////////////
 textInput.addEventListener("input", (event) => {
   textOutput.textContent =
     event.currentTarget.value.trim() === ""
