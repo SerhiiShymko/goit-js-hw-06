@@ -8,7 +8,9 @@ const textInput = document.querySelector("#validation-input");
 
 function onInputBlur(event) {
   // const onInputBlur = (event) => {
-  if (event.currentTarget.value.length === Number(textInput.dataset.length)) {
+  if (
+    event.currentTarget.value.trim().length === Number(textInput.dataset.length)
+  ) {
     textInput.classList.add("valid");
     textInput.classList.remove("invalid");
   } else {
