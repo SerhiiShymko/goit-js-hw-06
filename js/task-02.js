@@ -14,11 +14,19 @@ const ingredients = [
   "Condiments",
 ];
 
-const list = document.body.querySelector("#ingredients");
+const list = document.querySelector("#ingredients");
 
-ingredients.forEach((value) => {
-  const listItem = document.createElement("li");
-  listItem.classList.add("item");
-  listItem.textContent = value;
-  list.append(listItem);
+// ingredients.forEach((value) => {
+//   const listItem = document.createElement("li");
+//   listItem.classList.add("item");
+//   listItem.textContent = value;
+//   list.append(listItem);
+// });
+
+const listItem = ingredients.map((ingredient) => {
+  const ingredientItem = document.createElement("li");
+  ingredientItem.classList = "item";
+  ingredientItem.textContent = ingredient;
+  return ingredientItem;
 });
+list.append(...listItem);

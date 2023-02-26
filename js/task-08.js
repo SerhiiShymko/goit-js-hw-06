@@ -10,7 +10,7 @@ const handleSuccess = () => {
 const handleError = () => {
   const errorText = document.createElement("p");
   errorText.style.color = "red";
-  errorText.textContent = "Всі поля повинні бути заповнені";
+  errorText.textContent = alert("Всі поля повинні бути заповнені");
   document.querySelector(".login-form").append(errorText);
 };
 
@@ -21,6 +21,7 @@ const handleSubmit = (event) => {
   } = event.currentTarget;
   if (email.value === "" || password.value === "") {
     handleError();
+
     return;
   }
   handleSuccess();
