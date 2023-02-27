@@ -6,7 +6,7 @@ const span = document.querySelector("#text");
 // textInput.addEventListener("input", (event) => {
 //   span.style.fontSize = event.currentTarget.value + "px";
 // });
-
+span.style.fontSize = `${textInput.value}px`;
 const handleInput = () => {
   span.style.fontSize = `${textInput.value}px`;
 };

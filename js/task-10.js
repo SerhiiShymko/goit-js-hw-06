@@ -8,8 +8,9 @@ const btnDestroy = document.querySelector("[data-destroy]");
 const boxes = document.querySelector("#boxes");
 
 let amount = 0;
-let arrayNumber = [];
+// let arrayNumber = [];
 let firstSize = 30;
+inputText.value = "";
 
 btnCreate.addEventListener("click", createBoxes);
 btnDestroy.addEventListener("click", destroyBoxes);
@@ -19,6 +20,7 @@ inputText.addEventListener("input", (event) => {
 });
 
 function createBoxes() {
+  let arrayNumber = [];
   if (amount > 0) {
     for (let i = 1; i <= amount; i += 1) {
       firstSize += 10 * i;
@@ -29,12 +31,15 @@ function createBoxes() {
     return alert("Пусте значення");
   }
   boxes.insertAdjacentHTML("beforeend", arrayNumber.join(""));
-  // arrayNumber = [];
+  amount = 0;
+  arrayNumber = [];
   inputText.value = "";
 }
 
 function destroyBoxes(params) {
   // boxes.remove();
+  amount = 0;
+  firstSize = 30;
   inputText.value = "";
   boxes.innerHTML = "";
 }

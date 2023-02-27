@@ -1,10 +1,10 @@
 const form = document.querySelector(".login-form");
 
 const handleSuccess = () => {
-  document.querySelector("form").remove();
-  //   document
-  //     .querySelector(".login-form")
-  //     .insertAdjacentHTML("afterbegin", "<h2>Вхід успішний</h2>");
+  document.querySelector("form");
+  // document
+  //   .querySelector(".login-form")
+  //   .insertAdjacentHTML("afterend", "<h2>Вхід успішний</h2>");
 };
 
 const handleError = () => {
