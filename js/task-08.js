@@ -26,7 +26,9 @@ const handleSubmit = (event) => {
   }
   handleSuccess();
 
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  const userData = { email: email.value, Password: password.value };
+  console.log(userData);
+
   event.currentTarget.reset();
 };
 
